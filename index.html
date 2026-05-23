@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lexi Lavene | Stories with Teeth & Heart</title>
+  <meta name="description" content="Author website for Lexi Lavene: myth-soaked romance, eerie retellings, and stories for readers who like their magic with a little bite." />
+  <style>
+    :root {
+      --ink: #f2e8dc;
+      --plum: #2a1825;
+      --mauve: #5c4355;
+      --rose: #b78274;
+      --cream: #f2e8dc;
+      --paper: #161015;
+      --tea: #d0a06e;
+      --sage: #6f7d63;
+      --ember: #ff9d5c;
+      --shadow: rgba(0, 0, 0, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(183, 130, 116, 0.18), transparent 24rem),
+        radial-gradient(circle at bottom right, rgba(111, 125, 99, 0.12), transparent 30rem),
+        linear-gradient(180deg, #120d12 0%, #1a1218 38%, #23161d 100%);
+      min-height: 100vh;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.12;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mix-blend-mode: screen;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 50% 120%, rgba(255, 157, 92, 0.12), transparent 38rem);
+      opacity: 0.9;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .shell {
+      width: min(1120px, calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 1.25rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(18px);
+      background: rgba(20, 13, 19, 0.72);
+      border-bottom: 1px solid rgba(242, 232, 220, 0.08);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-size: clamp(1.15rem, 2vw, 1.5rem);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      padding: 0.3rem 0.1rem;
+      border-bottom: 1px solid transparent;
+    }
+
+    .nav-links a:hover {
+      border-bottom-color: var(--plum);
+    }
+
+    .hero {
+      min-height: 78vh;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: clamp(2rem, 5vw, 5rem);
+      padding: clamp(4rem, 9vw, 8rem) 0;
+    }
+
+    .eyebrow {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: rgba(242, 232, 220, 0.62);
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 8vw, 6.8rem);
+      line-height: 0.92;
+      letter-spacing: -0.055em;
+      max-width: 10ch;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-copy {
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      max-width: 38rem;
+      color: rgba(242, 232, 220, 0.78);
+      margin-bottom: 2rem;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 3rem;
+      padding: 0.8rem 1.15rem;
+      border-radius: 999px;
+      text-decoration: none;
+      border: 1px solid rgba(75, 48, 69, 0.35);
+      box-shadow: 0 12px 30px var(--shadow);
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 38px rgba(38, 29, 34, 0.22);
+    }
+
+    .button.primary {
+      background: var(--plum);
+      color: var(--cream);
+    }
+
+    .button.secondary {
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--cream);
+      border-color: rgba(242, 232, 220, 0.16);
+    }
+
+    .mood-card {
+      position: relative;
+      min-height: 32rem;
+      border-radius: 2rem;
+      padding: 1.25rem;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255, 157, 92, 0.12), transparent 12rem),
+        radial-gradient(circle at 80% 85%, rgba(111, 125, 99, 0.16), transparent 16rem),
+        radial-gradient(circle at 50% 100%, rgba(255, 220, 170, 0.08), transparent 14rem),
+        linear-gradient(160deg, #2b1c22 0%, #161015 48%, #0d0a0d 100%);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+      overflow: hidden;
+      color: var(--cream);
+      border: 1px solid rgba(242, 232, 220, 0.08);
+    }
+
+    .mood-card::before,
+    .mood-card::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      pointer-events: none;
+      filter: blur(30px);
+    }
+
+    .mood-card::before {
+      width: 18rem;
+      height: 18rem;
+      top: -5rem;
+      right: -5rem;
+      background: rgba(255, 157, 92, 0.1);
+    }
+
+    .mood-card::after {
+      width: 16rem;
+      height: 16rem;
+      bottom: -6rem;
+      left: -5rem;
+      background: rgba(111, 125, 99, 0.12);
+    }
+
+    .card-inner {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      min-height: 29rem;
+      border: 1px solid rgba(255, 249, 239, 0.12);
+      border-radius: 1.5rem;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      backdrop-filter: blur(4px);
+      background:
+        linear-gradient(to top, rgba(10, 8, 10, 0.58), rgba(10, 8, 10, 0.16));
+    }
+
+    .sigil {
+      width: 4rem;
+      height: 1px;
+      background: linear-gradient(to right, rgba(242, 232, 220, 0.65), transparent);
+      margin-bottom: 1.5rem;
+      opacity: 0.9;
+    }
+
+    .card-quote {
+      font-size: clamp(1.6rem, 3vw, 2.3rem);
+      line-height: 1.08;
+      max-width: 14ch;
+      text-shadow: 0 4px 18px rgba(0,0,0,0.35);
+    }
+
+    .card-note {
+      font-size: 0.9rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.75;
+    }
+
+    section {
+      padding: clamp(3.5rem, 7vw, 6rem) 0;
+    }
+
+    .section-heading {
+      display: grid;
+      gap: 0.6rem;
+      max-width: 42rem;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4.5vw, 4rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .section-heading p {
+      font-size: 1.1rem;
+      color: rgba(242, 232, 220, 0.74);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .story-card {
+      position: relative;
+      overflow: hidden;
+      background: rgba(255, 249, 239, 0.05);
+      border: 1px solid rgba(242, 232, 220, 0.12);
+      border-radius: 1.5rem;
+      padding: 1.25rem;
+      box-shadow: 0 16px 40px rgba(38, 29, 34, 0.1);
+      min-height: 19rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .story-cover {
+      width: 100%;
+      aspect-ratio: 2 / 3;
+      object-fit: cover;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(242, 232, 220, 0.12);
+    }
+
+    .story-card h3 {
+      font-size: 1.55rem;
+      line-height: 1.08;
+      margin-bottom: 0.75rem;
+    }
+
+    .story-card p {
+      color: rgba(242, 232, 220, 0.74);
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 1.2rem;
+    }
+
+    .tag {
+      font-size: 0.77rem;
+      border: 1px solid rgba(242, 232, 220, 0.12);
+      border-radius: 999px;
+      padding: 0.22rem 0.55rem;
+      background: rgba(255, 255, 255, 0.04);
+      color: rgba(242, 232, 220, 0.78);
+    }
+
+    .about-panel {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    .portrait-placeholder,
+    .about-copy {
+      background: rgba(255, 249, 239, 0.05);
+      border: 1px solid rgba(242, 232, 220, 0.12);
+      border-radius: 1.5rem;
+      box-shadow: 0 16px 40px rgba(38, 29, 34, 0.1);
+    }
+
+    .portrait-placeholder {
+      min-height: 24rem;
+      display: grid;
+      place-items: center;
+      padding: 1.5rem;
+      text-align: center;
+      background:
+        radial-gradient(circle at 50% 36%, rgba(201, 151, 157, 0.12), transparent 9rem),
+        linear-gradient(145deg, rgba(255, 249, 239, 0.06), rgba(234, 216, 215, 0.04));
+    }
+
+    .portrait-placeholder span {
+      font-size: 5rem;
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+
+    .about-copy {
+      padding: clamp(1.4rem, 3vw, 2rem);
+      font-size: 1.08rem;
+    }
+
+    .about-copy p + p {
+      margin-top: 1rem;
+    }
+
+    .link-board {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .link-tile {
+      display: block;
+      text-decoration: none;
+      background: var(--plum);
+      color: var(--cream);
+      border-radius: 1.5rem;
+      padding: 1.4rem;
+      min-height: 10rem;
+      box-shadow: 0 18px 42px rgba(38, 29, 34, 0.2);
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .link-tile:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 22px 50px rgba(38, 29, 34, 0.28);
+    }
+
+    .link-tile small {
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      opacity: 0.72;
+      margin-bottom: 1rem;
+    }
+
+    .link-tile strong {
+      font-size: 1.6rem;
+      line-height: 1;
+      display: block;
+    }
+
+    footer {
+      padding: 2rem 0 3rem;
+      text-align: center;
+      color: rgba(242, 232, 220, 0.55);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 850px) {
+      header {
+        position: static;
+      }
+
+      nav,
+      .hero,
+      .about-panel {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        display: grid;
+        justify-items: start;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .story-grid,
+      .link-board {
+        grid-template-columns: 1fr;
+      }
+
+      .mood-card {
+        min-height: 24rem;
+      }
+
+      .card-inner {
+        min-height: 21rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="shell" aria-label="Primary navigation">
+      <div class="logo">Lexi Lavene</div>
+      <div class="nav-links">
+        <a href="#stories">Stories</a>
+        <a href="#about">About</a>
+        <a href="#links">Links</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero shell">
+      <div>
+        <p class="eyebrow">Stories for people who romanticize thunderstorms, candlelight, and the smell of old books</p>
+        <h1>Stories with teeth and heart.</h1>
+        <p class="hero-copy">
+          Pull up a chair by the fire. The tea is hot, the woods are haunted, and every story here is a little in love with the dark.
+        </p>
+        <div class="button-row">
+          <a class="button primary" href="YOUR-WATTPAD-LINK-HERE">Read on Wattpad</a>
+          <a class="button secondary" href="YOUR-STORYGRAPH-LINK-HERE">Find me on StoryGraph</a>
+        </div>
+      </div>
+
+      <aside class="mood-card" aria-label="Mood card">
+        <div class="card-inner">
+          <div>
+            <div class="sigil"></div>
+            <p class="card-quote" id="rotating-quote">“Drink,” she offered, holding it up to him. “Drink and be reborn.”</p>
+          </div>
+          <p class="card-note" id="quote-source">WE WOULD BE GODS</p>
+        </div>
+      </aside>
+    </section>
+
+    <section id="stories" class="shell">
+      <div class="section-heading">
+        <p class="eyebrow">Current worlds</p>
+        <h2>Choose your particular brand of beautiful trouble.</h2>
+        <p>Start with the story that feels most likely to gently take your hand and then sprint directly into the haunted woods.</p>
+      </div>
+
+      <div class="story-grid">
+        <article class="story-card">
+          <div>
+            <img class="story-cover" src="images/we-would-be-gods.png" alt="We Would Be Gods book cover" />
+            <h3>We Would Be Gods</h3>
+            <p>A fragmented, myth-soaked love story about memory, devotion, and the kind of bond that refuses to stay buried.</p>
+          </div>
+          <div class="tag-row">
+            <span class="tag">mythic romance</span>
+            <span class="tag">goddess vibes</span>
+            <span class="tag">broken memories</span>
+          </div>
+        </article>
+
+        <article class="story-card">
+          <div>
+            <img class="story-cover" src="images/stars-shine-darkly.png" alt="Stars Shine Darkly book cover" />
+            <h3>Stars Shine Darkly</h3>
+            <p>A dark Neverland retelling where the island is hungry, the stories lied, and growing up might be the only way to survive.</p>
+          </div>
+          <div class="tag-row">
+            <span class="tag">dark retelling</span>
+            <span class="tag">survival</span>
+            <span class="tag">feral fairytale</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="shell">
+      <div class="section-heading">
+        <p class="eyebrow">About the author</p>
+        <h2>Hi, I’m Lexi.</h2>
+      </div>
+
+      <div class="about-panel">
+        <div class="portrait-placeholder">
+          <div>
+            <span>—</span>
+            <p>Author photo, logo, or dramatic teacup goes here.</p>
+          </div>
+        </div>
+        <div class="about-copy">
+          <p>
+            I write stories for readers who love magic, banter, myth, messy feelings, and characters who are doing their absolute best despite the narrative personally victimizing them.
+          </p>
+          <p>
+            My favorite stories usually involve women choosing themselves, monsters with surprisingly tender hearts, old magic, impossible bargains, and at least one moment where everything hurts—but gently. Ish.
+          </p>
+          <p>
+            Around here, you’ll find dark fairytales, cozy-ish chaos, mythic romance, and a suspicious number of emotionally significant doors.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="links" class="shell">
+      <div class="section-heading">
+        <p class="eyebrow">Where to find me</p>
+        <h2>Follow the breadcrumbs.</h2>
+      </div>
+
+      <div class="link-board">
+        <a class="link-tile" href="YOUR-WATTPAD-LINK-HERE">
+          <small>Read</small>
+          <strong>Wattpad</strong>
+        </a>
+        <a class="link-tile" href="YOUR-STORYGRAPH-LINK-HERE">
+          <small>Track</small>
+          <strong>StoryGraph</strong>
+        </a>
+        <a class="link-tile" href="YOUR-INSTAGRAM-LINK-HERE">
+          <small>Breadcrumbs</small>
+          <strong>Instagram</strong>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell">
+    <p>© <span id="year"></span> Lexi Lavene. Made of caffeine, chaos, and suspiciously sentient plot bunnies.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const quotes = [
+      {
+        text: '“Drink,” she offered, holding it up to him. “Drink and be reborn.”',
+        source: 'WE WOULD BE GODS'
+      },
+      {
+        text: 'I am forgetfulness. I am sweet oblivion.',
+        source: 'WE WOULD BE GODS'
+      },
+      {
+        text: 'Time was a construct brought on by the rising of the moon and sun, a construct that Lethe had no interest in. Until, all at once, she met him.',
+        source: 'WE WOULD BE GODS'
+      },
+      {
+        text: 'He was a bloody broken mess of a man, and he remembered every moment of it.',
+        source: 'WE WOULD BE GODS'
+      },
+      {
+        text: '“You’re to fetch your lover and return with me. You owe a debt of blood.”',
+        source: 'WE WOULD BE GODS'
+      },
+      {
+        text: 'Time means nothing in Neverland. Some days are longer than others, and the nights sometimes go on forever.',
+        source: 'STARS SHINE DARKLY'
+      },
+      {
+        text: 'The monsters here don’t care if you’re Hook, a pirate, or a lost boy. And Neverland has never been described as comforting.',
+        source: 'STARS SHINE DARKLY'
+      },
+      {
+        text: 'Drinking from your own poisoned well, I see.',
+        source: 'STARS SHINE DARKLY'
+      },
+      {
+        text: '“You’re Peter Pan,” she breathed, awe burbling up through the mounting horror.',
+        source: 'STARS SHINE DARKLY'
+      }
+    ];
+
+    const quoteElement = document.getElementById('rotating-quote');
+    const sourceElement = document.getElementById('quote-source');
+    let currentQuoteIndex = -1;
+
+    function getRandomQuoteIndex() {
+      let nextIndex = Math.floor(Math.random() * quotes.length);
+
+      if (quotes.length > 1) {
+        while (nextIndex === currentQuoteIndex) {
+          nextIndex = Math.floor(Math.random() * quotes.length);
+        }
+      }
+
+      currentQuoteIndex = nextIndex;
+      return nextIndex;
+    }
+
+    function setRandomQuote(animate = true) {
+      const quote = quotes[getRandomQuoteIndex()];
+
+      if (!animate) {
+        quoteElement.textContent = quote.text;
+        sourceElement.textContent = quote.source;
+        return;
+      }
+
+      quoteElement.style.opacity = 0;
+      sourceElement.style.opacity = 0;
+
+      setTimeout(() => {
+        quoteElement.textContent = quote.text;
+        sourceElement.textContent = quote.source;
+        quoteElement.style.opacity = 1;
+        sourceElement.style.opacity = 0.75;
+      }, 250);
+    }
+
+    quoteElement.style.transition = 'opacity 400ms ease';
+    sourceElement.style.transition = 'opacity 400ms ease';
+
+    setRandomQuote(false);
+    setInterval(setRandomQuote, 90000);
+  </script>
+</body>
+</html>
