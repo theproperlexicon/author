@@ -40,6 +40,32 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
+  
+. about-panel {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: rgba(255, 249, 239, 0.05);
+  border: 1px solid rgba(242, 232, 220, 0.12);
+  border-radius: 1.5rem;
+  padding: 2rem;
+}
+
+.author-photo {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+
+.about-copy {
+  font-size: 1.08rem;
+}
+
+.about-copy p + p {
+  margin-top: 1rem;
+}
 
     body::before {
       content: "";
@@ -537,38 +563,32 @@
       </div>
     </section>
 
-    <section id="about" class="shell">
-      <div class="section-heading">
-        <p class="eyebrow">About the author</p>
-        <h2>Hi, I’m Lexi.</h2>
-      </div>
+   <section id="about" class="shell">
+  <div class="section-heading">
+    <p class="eyebrow">About the author</p>
+    <h2>Hi, I’m Lexi.</h2>
+  </div>
 
+  <div class="about-panel">
+    <img 
+      class="author-photo"
+      src="images/IMG_4339.JPG" 
+      alt="Author photo of Lexi Lavene"
+    />
 
-  <img 
-    src="images/IMG_4339.JPG" 
-    alt="Author photo of Lexi Lavene"
-    style="
-      width: 200px
-      height: 200px;
-      object-fit: cover;
-      border-radius: 1rem;
-      flex-shrink: 0;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-    "
- 
-        <div class="about-copy">
-          <p>
-            I write stories for readers who love magic, banter, myth, messy feelings, and characters who are doing their absolute best despite the narrative personally victimizing them.
-          </p>
-          <p>
-            My favorite stories usually involve women choosing themselves, monsters with surprisingly tender hearts, old magic, impossible bargains, and at least one moment where everything hurts—but gently. Ish.
-          </p>
-          <p>
-            Around here, you’ll find dark fairytales, cozy-ish chaos, mythic romance, and a suspicious number of emotionally significant doors.
-          </p>
-        </div>
-      </div>
-    </section>
+    <div class="about-copy">
+      <p>
+        I write stories for readers who love magic, banter, myth, messy feelings, and characters who are doing their absolute best despite the narrative personally victimizing them.
+      </p>
+      <p>
+        My favorite stories usually involve women choosing themselves, monsters with surprisingly tender hearts, old magic, impossible bargains, and at least one moment where everything hurts—but gently. Ish.
+      </p>
+      <p>
+        Around here, you’ll find dark fairytales, cozy-ish chaos, mythic romance, and a suspicious number of emotionally significant doors.
+      </p>
+    </div>
+  </div>
+</section>
 
     <section id="links" class="shell">
       <div class="section-heading">
