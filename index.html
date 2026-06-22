@@ -209,6 +209,77 @@
       color: var(--cream);
     }
 
+    .book-carousel {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.carousel-window {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1rem;
+  transition: transform 400ms ease;
+}
+
+.carousel-card {
+  min-width: calc((100% - 2rem) / 3);
+  background: rgba(255, 249, 239, 0.05);
+  border: 1px solid rgba(242, 232, 220, 0.12);
+  border-radius: 1.5rem;
+  padding: 1rem;
+  box-shadow: 0 16px 40px rgba(38, 29, 34, 0.1);
+}
+
+.carousel-card a {
+  text-decoration: none;
+}
+
+.carousel-card img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+.carousel-card h3 {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.carousel-button {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(242, 232, 220, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--cream);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.carousel-button:hover {
+  background: var(--plum);
+}
+
+.carousel-shop-button {
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+@media (max-width: 850px) {
+  .carousel-card {
+    min-width: 100%;
+  }
+}
+
     .button.secondary {
       background: rgba(255, 255, 255, 0.06);
       color: var(--cream);
@@ -542,34 +613,71 @@
         <p>Start with the story that feels most likely to gently take your hand and then sprint directly into the haunted woods.</p>
       </div>
 
-      <div class="story-grid">
-        <article class="story-card">
-          <div>
-            <img class="story-cover" src="images/we-would-be-gods.png" alt="We Would Be Gods book cover" />
-            <h3>We Would Be Gods</h3>
-            <p>A fragmented, myth-soaked love story about memory, devotion, and the kind of bond that refuses to stay buried.</p>
-          </div>
-          <div class="tag-row">
-            <span class="tag">mythic romance</span>
-            <span class="tag">goddess vibes</span>
-            <span class="tag">broken memories</span>
-          </div>
+<section id="stories" class="shell">
+  <div class="section-heading">
+    <p class="eyebrow">Current worlds</p>
+    <h2>Shop the bookshelf.</h2>
+    <p>Browse the books currently available in The Storybound Archive.</p>
+  </div>
+
+  <div class="book-carousel" aria-label="Available books carousel">
+    <button class="carousel-button prev" type="button" aria-label="Previous book">‹</button>
+
+    <div class="carousel-window">
+      <div class="carousel-track" id="bookCarouselTrack">
+
+        <article class="carousel-card">
+          <a href="https://payhip.com/b/2gz1o" target="_blank">
+            <img src="images/freefall.png" alt="Freefall book cover">
+            <h3>Freefall</h3>
+          </a>
         </article>
 
-        <article class="story-card">
-          <div>
-            <img class="story-cover" src="images/stars-shine-darkly.png" alt="Stars Shine Darkly book cover" />
-            <h3>Stars Shine Darkly</h3>
-            <p>A dark Neverland retelling where the island is hungry, the stories lied, and growing up might be the only way to survive.</p>
-          </div>
-          <div class="tag-row">
-            <span class="tag">dark retelling</span>
-            <span class="tag">survival</span>
-            <span class="tag">feral fairytale</span>
-          </div>
+        <article class="carousel-card">
+          <a href="https://payhip.com/b/WRQcK" target="_blank">
+            <img src="images/skywards.png" alt="Skywards book cover">
+            <h3>Skywards</h3>
+          </a>
         </article>
+
+        <article class="carousel-card">
+          <a href="https://payhip.com/b/gtP85" target="_blank">
+            <img src="images/dragonflies.png" alt="Dragonflies book cover">
+            <h3>Dragonflies</h3>
+          </a>
+        </article>
+
+        <article class="carousel-card">
+          <a href="https://payhip.com/b/sPByv" target="_blank">
+            <img src="images/viceroy.png" alt="Viceroy book cover">
+            <h3>Viceroy</h3>
+          </a>
+        </article>
+
+        <article class="carousel-card">
+          <a href="https://payhip.com/b/QX15Z" target="_blank">
+            <img src="images/monarch.png" alt="Monarch book cover">
+            <h3>Monarch</h3>
+          </a>
+        </article>
+
+        <article class="carousel-card">
+          <a href="https://payhip.com/b/c9CLk" target="_blank">
+            <img src="images/how-our-story-ends.png" alt="How Our Story Ends book cover">
+            <h3>How Our Story Ends</h3>
+          </a>
+        </article>
+
       </div>
-    </section>
+    </div>
+
+    <button class="carousel-button next" type="button" aria-label="Next book">›</button>
+  </div>
+
+  <div class="button-row carousel-shop-button">
+    <a class="button primary" href="https://payhip.com/lexilavenebooks" target="_blank">Visit the Bookstore</a>
+  </div>
+</section>
 
    <section id="about" class="shell">
   <div class="section-heading">
@@ -716,6 +824,47 @@
 
     setRandomQuote(false);
     setInterval(setRandomQuote, 90000);
+
+    const carouselTrack = document.getElementById('bookCarouselTrack');
+const carouselCards = document.querySelectorAll('.carousel-card');
+const prevButton = document.querySelector('.carousel-button.prev');
+const nextButton = document.querySelector('.carousel-button.next');
+
+let carouselIndex = 0;
+
+function getVisibleCards() {
+  return window.innerWidth <= 850 ? 1 : 3;
+}
+
+function updateCarousel() {
+  const visibleCards = getVisibleCards();
+  const maxIndex = Math.max(carouselCards.length - visibleCards, 0);
+  carouselIndex = Math.min(carouselIndex, maxIndex);
+
+  const cardWidth = carouselCards[0].offsetWidth + 16;
+  carouselTrack.style.transform = `translateX(-${carouselIndex * cardWidth}px)`;
+}
+
+nextButton.addEventListener('click', () => {
+  const visibleCards = getVisibleCards();
+  const maxIndex = Math.max(carouselCards.length - visibleCards, 0);
+  carouselIndex = carouselIndex >= maxIndex ? 0 : carouselIndex + 1;
+  updateCarousel();
+});
+
+prevButton.addEventListener('click', () => {
+  const visibleCards = getVisibleCards();
+  const maxIndex = Math.max(carouselCards.length - visibleCards, 0);
+  carouselIndex = carouselIndex <= 0 ? maxIndex : carouselIndex - 1;
+  updateCarousel();
+});
+
+setInterval(() => {
+  nextButton.click();
+}, 7000);
+
+window.addEventListener('resize', updateCarousel);
+updateCarousel();
   </script>
 </body>
 </html>
