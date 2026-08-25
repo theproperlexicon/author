@@ -1,0 +1,34 @@
+STORYBOUND ARCHIVE — GITHUB PAGES FILES
+
+Upload the contents of the "blog" folder into a folder named "blog" in theproperlexicon/author.
+
+Keep the finished blog post HTML files in a separate root-level folder named "blogposts":
+
+author/
+  blog/
+    index.html
+    blog.css
+    books.js
+    assets/
+  blogposts/
+    aboutme.html
+    dragonflies.html
+    skywards.html
+    freefall.html
+    stars-shine-darkly.html
+    we-would-be-gods.html
+
+The public blog homepage will be:
+https://lexilavene.com/blog/
+
+Finished posts will be linked at:
+https://lexilavene.com/blogposts/story-name.html
+
+TO PUBLISH A NEW ENTRY
+
+1. Add its HTML file to the blogposts folder using the exact filename already listed in blog/books.js.
+2. Open blog/books.js.
+3. Change that entry from status: "coming-soon" to status: "published".
+4. Commit both changes.
+
+The card will automatically change color, become clickable, and say "Read the archive."
