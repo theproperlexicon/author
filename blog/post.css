@@ -1,8 +1,8 @@
 
-@font-face{font-family:"Viaoda Libre";src:url("/assets/fonts/ViaodaLibre-Regular.ttf") format("truetype");font-display:swap}
-@font-face{font-family:"Shadows Into Light";src:url("/assets/fonts/ShadowsIntoLight-Regular.ttf") format("truetype");font-display:swap}
-@font-face{font-family:"Square Peg";src:url("/assets/fonts/SquarePeg-Regular.ttf") format("truetype");font-display:swap}
-@font-face{font-family:"Just Another Hand";src:url("/assets/fonts/JustAnotherHand-Regular.ttf") format("truetype");font-display:swap}
+@font-face{font-family:"Viaoda Libre";src:url("/blog/assets/fonts/ViaodaLibre-Regular.ttf") format("truetype");font-display:swap}
+@font-face{font-family:"Shadows Into Light";src:url("/blog/assets/fonts/ShadowsIntoLight-Regular.ttf") format("truetype");font-display:swap}
+@font-face{font-family:"Square Peg";src:url("/blog/assets/fonts/SquarePeg-Regular.ttf") format("truetype");font-display:swap}
+@font-face{font-family:"Just Another Hand";src:url("/bog/assets/fonts/JustAnotherHand-Regular.ttf") format("truetype");font-display:swap}
 :root{--paper:#efe4cf;--light:#f8f1e5;--ink:#1d1819;--soft:#5a4b50;--plum:#4a273f;--dark:#301927;--rule:#33292c;--shadow:rgba(53,40,43,.13)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.65;background:linear-gradient(rgba(255,255,255,.2),rgba(255,255,255,.04)),repeating-linear-gradient(0deg,rgba(55,38,30,.025) 0 1px,transparent 1px 4px),var(--paper)}
 body:before,body:after{content:"";position:fixed;pointer-events:none;z-index:100}body:before{inset:12px;border:1px solid rgba(51,41,44,.65)}body:after{inset:18px;border:1px solid rgba(51,41,44,.2)}
