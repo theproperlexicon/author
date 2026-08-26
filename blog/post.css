@@ -1,4 +1,4 @@
-@import
+
 @font-face{font-family:"Viaoda Libre";src:url("/assets/fonts/ViaodaLibre-Regular.ttf") format("truetype");font-display:swap}
 @font-face{font-family:"Shadows Into Light";src:url("/assets/fonts/ShadowsIntoLight-Regular.ttf") format("truetype");font-display:swap}
 @font-face{font-family:"Square Peg";src:url("/assets/fonts/SquarePeg-Regular.ttf") format("truetype");font-display:swap}
@@ -39,6 +39,57 @@ body{background:radial-gradient(circle at 50% -10%,rgba(231,220,200,.4),transpar
 /* Individual archive entry */
 .post-page{padding-bottom:5rem}.post-hero{position:relative;min-height:520px;display:grid;place-items:center;overflow:hidden;padding:5.5rem 1.5rem 4.5rem;background:radial-gradient(ellipse at center,rgba(231,220,200,.96) 0 35%,rgba(201,189,166,.78) 67%,rgba(75,40,63,.22))}.post-title{position:relative;z-index:2;width:min(820px,100%);text-align:center}.post-title h1{font-size:clamp(4rem,10vw,7.5rem);text-shadow:0 3px 22px rgba(231,220,200,.9)}.post-deck{max-width:620px;margin:1.4rem auto 0;color:var(--plum);font-family:"Square Peg","Shadows Into Light",cursive;font-size:clamp(2rem,4vw,3rem);line-height:1.05}.post-meta{color:var(--soft);font-family:"Shadows Into Light",cursive;font-size:1rem;letter-spacing:.08em}.post-bloom{position:absolute;z-index:1;width:min(34vw,430px);height:430px;object-fit:contain;opacity:.72;pointer-events:none}.post-bloom-left{left:-6%;bottom:-16%;transform:rotate(-13deg)}.post-bloom-right{right:-7%;top:-12%;transform:rotate(17deg)}.reading-sheet{position:relative;width:min(760px,calc(100% - 3rem));margin:-1.5rem auto 0;padding:clamp(2.2rem,6vw,5rem);background:linear-gradient(rgba(248,241,229,.96),rgba(231,220,200,.96));border:3px double var(--rule);box-shadow:0 18px 36px rgba(37,24,31,.2);font-size:1.14rem;line-height:1.85}.reading-sheet>p:first-of-type:not(.preview-note):first-letter,.reading-sheet .preview-note+p:first-letter{float:left;padding:.15em .12em 0 0;color:var(--plum);font-family:"Viaoda Libre",serif;font-size:4.7rem;line-height:.72}.preview-note{margin:-2rem 0 3rem;padding-bottom:.9rem;border-bottom:1px solid rgba(56,43,52,.32);color:var(--sage);font-family:"Shadows Into Light",cursive;text-align:center;text-transform:uppercase;letter-spacing:.12em}.reading-sheet h2{margin:3rem 0 1rem;color:var(--plum);font-size:clamp(2rem,5vw,3.1rem);line-height:1}.reading-sheet blockquote{margin:2.6rem -1rem;padding:1.4rem 2rem;border-left:3px solid var(--moss);background:rgba(101,112,93,.1);font-family:"Shadows Into Light",cursive;font-size:clamp(1.6rem,4vw,2.25rem);text-align:center}.post-signoff{margin-top:2.5rem;color:var(--plum);font-family:"Square Peg",cursive;font-size:2.5rem;text-align:right}.paper-trail{width:min(900px,calc(100% - 3rem));margin:4rem auto 0;padding:2rem;border:3px double var(--rule);background:rgba(231,220,200,.58)}.paper-trail>p{text-align:center}.paper-trail>div{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}.paper-trail a{display:flex;flex-direction:column;padding:1.1rem;text-decoration:none;border:1px solid rgba(56,43,52,.42);background:rgba(248,241,229,.48)}.paper-trail a.current{background:var(--plum);color:var(--light)}.paper-trail small{margin-bottom:.3rem;font-family:"Shadows Into Light",cursive;text-transform:uppercase;letter-spacing:.12em}.post-bottom-nav{width:min(900px,calc(100% - 3rem));margin:2rem auto;display:flex;justify-content:space-between;gap:1rem;color:var(--plum);font-family:"Shadows Into Light",cursive;font-size:1rem;text-transform:uppercase;letter-spacing:.08em}.post-bottom-nav a{text-underline-offset:5px}
 @media(max-width:700px){.post-hero{min-height:470px;padding-top:4rem}.post-bloom{width:240px;height:260px;opacity:.38}.post-bloom-left{left:-100px}.post-bloom-right{right:-95px}.reading-sheet{width:calc(100% - 2rem);padding:2.4rem 1.5rem}.preview-note{margin:-.5rem 0 2rem}.reading-sheet blockquote{margin:2.2rem 0}.paper-trail>div{grid-template-columns:1fr}.post-bottom-nav{flex-direction:column;text-align:center}}
+
+/* Book shop section */
+.book-shop {
+  width: min(760px, calc(100% - 3rem));
+  margin: 4rem auto 0;
+  padding: clamp(2rem, 5vw, 3.5rem);
+  text-align: center;
+  border: 3px double var(--rule);
+  background: rgba(231, 220, 200, 0.72);
+  box-shadow: 0 14px 28px rgba(37, 24, 31, 0.16);
+}
+
+.book-shop h2 {
+  margin: 0.5rem 0 1rem;
+  color: var(--plum);
+  font-family: "Viaoda Libre", Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1;
+  font-weight: 500;
+}
+
+.book-shop > p:not(.eyebrow) {
+  max-width: 580px;
+  margin: 0 auto 1.75rem;
+  color: var(--soft);
+}
+
+.shop-button {
+  display: inline-block;
+  padding: 0.85rem 1.5rem;
+  color: var(--light);
+  background: var(--plum);
+  border: 1px solid var(--dark);
+  font-family: "Shadows Into Light", cursive;
+  font-size: 0.95rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.shop-button:hover,
+.shop-button:focus-visible {
+  background: var(--dark);
+  transform: translateY(-2px);
+}
+
+.shop-button:focus-visible {
+  outline: 3px solid var(--moss);
+  outline-offset: 3px;
+}
 
 /* About the author entry */
 .about-post-hero{background:radial-gradient(ellipse at center,rgba(231,220,200,.96) 0 34%,rgba(162,164,143,.7) 66%,rgba(52,66,55,.55))}.about-post-hero .post-title{max-width:900px}.about-post-hero .post-title h1{font-size:clamp(3.6rem,9vw,7rem)}.about-moth{width:min(25vw,280px);height:280px;right:2%;top:5%;opacity:.66}.about-reading-sheet{border-color:var(--moss)}.about-reading-sheet section+section{margin-top:1.2rem}.about-reading-sheet section h2{position:relative;margin-top:4.5rem}.about-reading-sheet section h2:after{content:"";display:block;width:72px;height:1px;margin-top:.8rem;background:var(--sage)}.about-reading-sheet section:first-child p:first-of-type:first-letter{float:left;padding:.15em .12em 0 0;color:var(--moss);font-family:"Viaoda Libre",serif;font-size:4.7rem;line-height:.72}.about-reading-sheet blockquote{border-left-color:var(--moss);color:var(--moss)}.about-bottom-nav{margin-top:3rem}
