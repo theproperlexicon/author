@@ -159,7 +159,7 @@ entries.forEach((entry) => {
     `book-card ${published ? "is-published" : "is-coming"}${entry.about ? " about-card" : ""}`;
 
   if (published) {
-    card.href = `/blogposts/${entry.file}`;
+    card.href = `/blog/blogposts/${entry.file}`;
   } else {
     card.setAttribute(
       "aria-label",
