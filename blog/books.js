@@ -29,7 +29,7 @@ const entries = [
   },
   {
     number: "003",
-    title: "Dragonflies",
+    title: "Into the Night",
     series: "Dragonflies · Book 1",
     note: "The beginning of the girls who learned they never had to stand alone.",
     file: "dragonflies.html",
@@ -38,7 +38,7 @@ const entries = [
   },
   {
     number: "004",
-    title: "Skywards",
+    title: "Against the Wind",
     series: "Dragonflies · Book 2",
     note: "The story grew wings, and the Dragonflies learned how far they could fly.",
     file: "skywards.html",
@@ -47,7 +47,7 @@ const entries = [
   },
   {
     number: "005",
-    title: "Freefall",
+    title: "Running on Empty",
     series: "Dragonflies · Book 3",
     note: "The final fall, the hardest choices, and the end of the first flight.",
     file: "freefall.html",
