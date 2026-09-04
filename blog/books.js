@@ -190,7 +190,7 @@ entries.forEach((entry) => {
     <span class="open-label">
       ${
         published
-          ? "Read the archive <b>→</b>"
+          ? "Behind the Story <b>→</b>"
           : "Coming soon"
       }
     </span>
