@@ -78,7 +78,7 @@ const entries = [
     series: "A standalone story",
     note: "A love story about truth, memory, and finding the missing pieces.",
     file: "how-our-story-ends.html",
-    status: "coming-soon",
+    status: "published",
     art: 8
   },
   {
@@ -101,11 +101,11 @@ const entries = [
   },
   {
     number: "011",
-    title: "Styx",
+    title: "The Gods We Are",
     series: "Gods · Book 2",
     note: "The river after forgetfulness—and the debt that could not be erased.",
     file: "styx.html",
-    status: "coming-soon",
+    status: "published",
     art: 11
   },
   {
