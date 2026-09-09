@@ -36,3 +36,37 @@ body{background:radial-gradient(circle at 50% -10%,rgba(231,220,200,.4),transpar
 .archive-note{position:relative;display:grid;grid-template-columns:.56fr 1fr;align-items:end;max-width:1020px}.note-flowers{position:relative;z-index:2;width:125%;max-height:530px;object-fit:contain;object-position:bottom right;margin:0 -25% -1rem 0}.archive-note .note-inner{position:relative;z-index:1;margin:0}.note-moth{position:absolute;z-index:3;width:105px;height:105px;object-fit:contain;right:-2rem;top:-3rem;transform:rotate(18deg)}
 @media(max-width:900px){.blooming-hero{min-height:620px}.hero-bloom{width:350px;left:-110px;opacity:.66}.hero-books{width:290px;right:-90px;opacity:.58}.archive-note{grid-template-columns:1fr}.note-flowers{width:280px;margin:0 auto -3rem}.note-moth{right:1rem;top:12rem}}
 @media(max-width:600px){.blooming-hero{min-height:570px;padding:4.5rem 0}.hero-bloom{width:250px;height:320px;left:-95px;bottom:-35px;opacity:.52}.hero-books{width:190px;height:210px;right:-65px;top:1rem;opacity:.45}.blooming-hero h1{font-size:clamp(2.8rem,15vw,4.5rem)}.heading-books{height:190px;margin-bottom:-1rem}.book-card{padding-top:6rem}.card-bloom{width:120px;height:120px}.note-moth{width:80px;height:80px;right:0}}
+
+.published-archive-links {
+  margin: 3rem auto 0;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(85, 63, 69, 0.2);
+  text-align: center;
+}
+
+.published-archive-links h2 {
+  margin-bottom: 1rem;
+  font-size: 1.15rem;
+}
+
+.published-archive-links ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.published-archive-links a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+}
+
+.published-archive-links a:hover,
+.published-archive-links a:focus-visible {
+  opacity: 0.7;
+}
