@@ -448,6 +448,74 @@
   justify-content: flex-start;
 }
 
+/* BUNDLES */
+
+.bundles-collection .collection-heading {
+  margin-bottom: 46px;
+}
+
+.bundle-grid {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 1080px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 42px 34px;
+  align-items: start;
+}
+
+.bundle-card {
+  min-width: 0;
+  text-align: center;
+}
+
+.bundle-cover {
+  width: min(100%, 170px);
+  margin: 0 auto 22px;
+}
+
+.bundle-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1423 / 2048;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.34);
+}
+
+.bundle-card.forthcoming .bundle-cover img {
+  filter: saturate(0.72);
+}
+
+.bundle-copy {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.bundle-copy .book-order {
+  margin-bottom: 10px;
+}
+
+.bundle-copy h3 {
+  margin: 0 0 10px;
+  color: var(--cream);
+  font: 400 29px/1.05 "Viaoda Libre", serif;
+}
+
+.bundle-copy > p:not(.book-order) {
+  margin: 0;
+  color: rgba(239, 227, 207, 0.76);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.bundle-copy .book-actions {
+  margin-top: 17px;
+  justify-content: center;
+}
+
 /* ARCHIVE CTA */
 
 .shelf-note {
@@ -514,6 +582,11 @@
   .margin-art-right {
     right: 14px;
   }
+
+  .bundle-grid {
+    max-width: 700px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 /* PHONES */
@@ -571,6 +644,16 @@
 
   .standalone-shelves .book-actions {
     justify-content: center;
+  }
+
+  .bundle-grid {
+    max-width: 340px;
+    grid-template-columns: 1fr;
+    gap: 54px;
+  }
+
+  .bundle-cover {
+    width: 155px;
   }
 
   .collection-heading {
