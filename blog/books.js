@@ -32,7 +32,7 @@ const entries = [
     title: "Into the Night",
     series: "Dragonflies · Book 1",
     note: "The beginning of the girls who learned they never had to stand alone.",
-    file: "dragonflies.html",
+    file: "into-the-night.html",
     status: "published",
     art: 3
   },
@@ -41,7 +41,7 @@ const entries = [
     title: "Against the Wind",
     series: "Dragonflies · Book 2",
     note: "The story grew wings, and the Dragonflies learned how far they could fly.",
-    file: "skywards.html",
+    file: "against-the-wind.html",
     status: "published",
     art: 4
   },
@@ -50,7 +50,7 @@ const entries = [
     title: "Running on Empty",
     series: "Dragonflies · Book 3",
     note: "The final fall, the hardest choices, and the end of the first flight.",
-    file: "freefall.html",
+    file: "running-on-empty.html",
     status: "published",
     art: 5
   },
@@ -104,7 +104,7 @@ const entries = [
     title: "The Gods We Are",
     series: "Gods · Book 2",
     note: "The river after forgetfulness—and the debt that could not be erased.",
-    file: "styx.html",
+    file: "the-gods-we-are.html",
     status: "published",
     art: 11
   },
