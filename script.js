@@ -47,7 +47,7 @@ const quotes = [
   { text: "You find that answer, and then you'll find others.", source: "Mercy & Mayhem" },
 ];
 
-let currentQuote = 30;
+let currentQuote = Math.floor(Math.random() * quotes.length);
 
 const noteNumber = document.querySelector("[data-note-number]");
 const quoteText = document.querySelector("[data-quote-text]");
